@@ -1,0 +1,110 @@
+/* Inter font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+/* Icons Styles */
+.fa-solid{
+    margin-left: 7px;
+}
+
+
+/* Shared Styles */
+.nav-bar a{
+    text-decoration: none;
+}
+
+.display-flex, .nav-btn{
+    display: flex;
+}
+
+/* Display None for Mobile Device */
+.menu{
+    display: none;
+}
+
+/* Header Styles */
+.menu{
+    display: none;
+}
+.nav-bar{
+    background-color: #1A0B2E;
+    max-width: 100%;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-bar h1{
+    color: #C4C4C4;
+    font-weight: bold;
+}
+.nav-links{
+    list-style: none;
+    font-size: 1rem;
+    gap: 32px;
+}
+.nav-links a{
+    padding: 5px;
+}
+
+.nav-links a:hover{
+    border: 2px solid red;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.nav-links a{
+    color: #C4C4C4;
+}
+
+.nav-btn{
+    text-decoration: none;
+    background: linear-gradient(45deg,rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+    color: white;
+    border: none;
+    border-radius: 100px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 600px;
+    font-size: 1rem;
+    align-items: center;
+    width: 130px;
+    height: 44px;
+    transition: transform 0.3s ease;
+}
+
+.nav-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Responsive Meadia Query */
+
+/* Small Device */
+@media screen and (max-width: 576px) {
+    .nav-bar, .nav-links, .nav-btn{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        background-color: #1A0B2E;
+        justify-content: space-between;
+    }
+    .mobile-logo{
+       /* color: #FB09B4, #F7E93F; */
+    background: linear-gradient(45deg, #F7E93F, #FB09B4);
+    background-clip: text;
+    color: transparent;
+    }
+    .menu a{
+        margin: 0px 25px;
+        text-decoration: none;
+        color: white;
+    }
+
+}
