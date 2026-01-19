@@ -20,17 +20,25 @@ body{
     display: flex;
 }
 
+.nav-btn:hover, .btn-one:hover, .btn-two:hover{
+    cursor: pointer;
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+.linear-gradient{
+    background: linear-gradient(45deg,rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+}
+
 /* Display None for Mobile Device */
 .menu{
     display: none;
 }
 
 /* Header Styles */
-.menu{
-    display: none;
-}
 .nav-bar{
     background-color: #1A0B2E;
+    width: 1600px;
     max-width: 100%;
     height: 92px;
     display: flex;
@@ -63,7 +71,6 @@ body{
 
 .nav-btn{
     text-decoration: none;
-    background: linear-gradient(45deg,rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
     color: white;
     border: none;
     border-radius: 100px;
@@ -77,16 +84,135 @@ body{
     transition: transform 0.3s ease;
 }
 
-.nav-btn:hover{
-    cursor: pointer;
-    transform: scale(1.1);
+hr{
+    margin: 0 auto;
+    border: 1px solid #C4C4C4;
+}
+/* Banner Section Styles */
+#banner{
+    background-image: url('../assets/hero-bg.png');
+    width: 1600px;
+    max-width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 760px;
+}
+
+#banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 555px;
+}
+
+.banner-bg{
+    border: 8px solid #2A186C;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner-bg img{
+    padding: 77px 116px 97px;
+}
+
+.banner-bg p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: -20px;
+    width: 75px;
+    height: 38px;
+    top: 9%;
+    right: -2%;
+    background-color: #00FF88;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+.banner-text h1{
+    color: #FFFFFF;
+}
+
+.banner-text p{
+    color: #C4C4C4;
+}
+
+.banner-text h1{
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.banner-text{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-btn{
+    display: flex;
+    gap: 10px;
+}
+
+.banner-btn a{
+    text-decoration: none;
+}
+
+.btn-one, .btn-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-one{
+    width: 201px;
+    height: 44px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+.btn-two{
+    width: 147px;
+    height: 44px;
+    font-size: 1rem;
+    border: 1px solid #00FF88;
+    border-radius: 50px;
+    background: none;
+    color: #00FF88;
 }
 
 /* Responsive Meadia Query */
-
 /* Small Device */
 @media screen and (max-width: 576px) {
-    .nav-bar, .nav-links, .nav-btn{
+    /* Header Section Responsive */
+    .nav-bar{
         display: none;
     }
     .menu{
@@ -96,10 +222,9 @@ body{
         justify-content: space-between;
     }
     .mobile-logo{
-       /* color: #FB09B4, #F7E93F; */
-    background: linear-gradient(45deg, #F7E93F, #FB09B4);
-    background-clip: text;
-    color: transparent;
+        background: linear-gradient(45deg, #F7E93F, #FB09B4);
+        background-clip: text;
+        color: transparent;
     }
     .menu a{
         margin: 0px 25px;
@@ -107,4 +232,54 @@ body{
         color: white;
     }
 
+    /* Banner Section Responsive */
+        #banner{
+            width: 440px;
+            height: 550px;
+        }
+        .banner-bg{
+            margin-top: 100px;
+            width: 200px;
+            height: 200px;
+        }
+        .banner-bg img{
+            width: 80px;
+            height: 80px;
+            align-items: center;
+        }
+        .banner-container{
+            width: 400px;
+            max-width: 350px;
+            height: 346px;
+        }
+        .banner-text h1{
+            font-size: 2rem;
+            gap: 24px;
+        }
+        .banner-text{
+            margin-top: 30px;
+            width: 100%;
+            padding: 0 15px;
+        }
+        .banner-text h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .banner-text p{
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.5;
+            margin-top: 10px;
+            word-wrap: break-word;
+        }
+        .banner-btn{
+            flex-direction: row;
+            gap: 12px;
+            margin-top: 20px;
+            width: 100%;
+            margin-left: 15px;
+        }
+        .btn-one{
+            width: 170px;
+        }
 }
