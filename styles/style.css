@@ -3,6 +3,8 @@
 
 body{
     font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -32,6 +34,8 @@ body{
 }
 
 .hr-design{
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
     border: 1px solid #594e4e;
 }
@@ -47,7 +51,13 @@ body{
 }
 
 
-/* Header Styles */
+/* Header Section Styles */
+header {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
 .nav-bar{
     background-color: #1A0B2E;
     width: 100%;
@@ -100,8 +110,13 @@ body{
     transition: transform 0.3s ease;
 }
 
-
 /* Banner Section Styles */
+main{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
 #banner{
     background-image: url('../assets/hero-bg.png');
     width: 100%;
@@ -111,7 +126,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     height: 760px;
-    
+    /* Banner Position Related */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -219,7 +234,6 @@ body{
     color: #00FF88;
 }
 
-
 /* About Section Styles */
 #about{
     width: 100%;
@@ -259,9 +273,92 @@ body{
     font-weight: bold;
 }
 
+/* Why Choose Section Styles */
+#choose{
+    background-color: #230E3D;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    padding-bottom: 120px;
+}
+
+.choose-question{
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: 0 0 88px 0;
+}
+
+.choose-boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    transition: transform 2s ease;
+}
+
+.choose-boxes img{
+    width: 50px;
+    height: 50px;
+}
+
+.choose-box-1{
+    grid-row: span 2;
+}
+
+.choose-box-2{
+    grid-column: span 2;
+}
+
+.choose-box-3{
+    grid-column: span 2;
+}
+
+.choose-box-4{
+    grid-column: span 2;
+}
+
+.choose-box-5{
+    grid-column: span 1;
+    font-size: 1rem;
+}
+
+.choose-boxes h3{
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.choose-boxes p{
+    color: #C4C4C4;
+}
+
+.choose-box{
+    background-color: #2A0F4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 40px;
+    border-radius: 40px;
+}
+
+.choose-box:hover{
+    transform: translateY(-20px);
+}
+
+
+
 /* Responsive Meadia Query */
+
 /* Small Device */
 @media screen and (max-width: 576px) {
+
     /* Header Section Responsive */
     .nav-bar{
         display: none;
@@ -288,7 +385,6 @@ body{
     /* Banner Section Responsive */
     #banner{
         width: 100%;
-        /* height: 550px; */
         height: auto;
     }
     .banner-bg{
@@ -346,6 +442,7 @@ body{
 
     /* About section Responsive */
     #about{
+        max-height: 620px;
         height: auto;
         gap: 20px;
     }
@@ -366,7 +463,30 @@ body{
         row-gap: 40px;
         padding-bottom: 40px;
     }
-    .car{
-        row-gap: 100px;
+
+    /* Why Choose Section Responsive */
+    .choose-boxes{
+        padding-left: 20px;
+        padding-right: 20px;
     }
+    .choose-question{
+        font-size: 2rem;
+        padding-top: 40px;
+        padding-top: 40px;
+        margin-bottom: -60px;
+    }
+    .choose-boxes h3{
+        font-size: 1.25rem;
+    }
+
+    .choose-boxes{
+        margin-top: 40px;
+    }
+    .choose-boxes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .choose-box{
+        grid-column: span 1;
+    }
+    
 }
