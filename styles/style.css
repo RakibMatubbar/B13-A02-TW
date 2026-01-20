@@ -62,7 +62,8 @@ header {
     background-color: #1A0B2E;
     width: 100%;
     max-width: 1600px;
-    height: 92px;
+    max-height: auto;
+    /* height: 92px; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,8 +101,10 @@ header {
 }
 
 .nav-links a:hover{
-    border: 2px solid red;
-    padding: 2px;
+    background-color: #2A186C;
+    padding: 3px;
+    color: #E907BF;
+    text-align: center;
     border-radius: 5px;
     font-weight: bold;
 }
@@ -310,11 +313,10 @@ main{
 .choose-question{
     text-align: center;
     padding-top: 120px;
-    padding-bottom: 40px;
+    margin: 0 auto;
     color: #FFFFFF;
     font-size: 3rem;
     font-weight: bolder;
-    margin: 0 0 88px 0;
 }
 
 .choose-boxes{
@@ -322,7 +324,9 @@ main{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
-    margin: 120px 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 30px;
     margin-bottom: 0px;
     transition: transform 2s ease;
 }
@@ -392,7 +396,6 @@ main{
     background-color: #1A0B2E;
     height: auto;
     width: 100%;
-    /* padding-top: 120px; */
     padding-bottom: 120px;
 }
 
@@ -407,8 +410,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .fetured-text{
@@ -594,7 +597,6 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    /* padding-bottom: 50px; */
     transition: transform 0.3s ease;
 }
 
@@ -612,6 +614,8 @@ footer{
 .footer-copy{
     margin-bottom: 40px ;
 }
+
+
 
 /* Responsive Meadia Query */
 
@@ -707,9 +711,7 @@ footer{
         height: auto;
         gap: 20px;
     }
-    .about-text{
-        margin-top: 80px;
-    }
+   
     .about-text h1{
         gap: 20px;
         font-size: 2rem;
@@ -728,7 +730,7 @@ footer{
 
     /* Why Choose Section Responsive */
     #choose{
-        padding-top: 40px;
+        padding-top: 60px;
         padding-bottom: 40px;
     }
     .choose-boxes{
@@ -746,7 +748,7 @@ footer{
     }
 
     .choose-boxes{
-        margin-top: 40px;
+        margin-top: 90px;
     }
     .choose-boxes{
         grid-template-columns: repeat(1, 1fr);
@@ -812,19 +814,110 @@ footer{
 }
 
 
+
 /* Medium Device: Not Mandatory */
 @media screen and (min-width: 576px) and (max-width: 992px) {
+
     /* Header Section Responsive */
+    .nav-bar{
+        padding-bottom: 10px;
+        flex-direction: column;
+        /* text-align: left; */
+        /* gap: 0px; */
+    }
+    .nav-links a:hover{
+        all: unset;
+        border: 1px solid #C4C4C4;
+        border-radius: 50px;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        padding: 5px;
+        background-color: #2A0F4D;
+        text-align: center;
+        color: #C4C4C4;
+        cursor: pointer;
+    }
+  
+    .nav-links a{
+        border: none;
+        margin-right: 50px;
+        margin-bottom: 20px;
+    }
+
 
     /* Banner Section Responsive */
+    .banner-bg{
+        height: 250px;
+        width: 250px;
+    }
+    .banner-bg img{
+        width: 100px;
+        height: 100px;
+    }
+    .banner-bg p{
+        width: 50px;
+        height: 30px;
+    }
+    .banner-text h1{
+        font-size: 2.25rem;
+    }
 
     /* About section Responsive */
+    .about-text h1{
+        font-size: 2.25rem;
+    }
+    .about-text p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .about-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     /* Why Choose Section Responsive */
-
+    .choose-question{
+        font-size: 2.25rem;
+        padding-bottom: 40px;
+    }
+    .choose-boxes{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px;
+    }
+    
     /* Featured Episodes Section Responsive */
-
+    .featured-text{
+        font-size: 2.25rem;
+    }
+    .featured-container{
+        flex-direction: column;
+    }
+   
     /* Challange Section Responsive */
+    .host-meet h1{
+        font-size: 2.25rem;
+    }
+    .host-bg{
+        margin: 30px;
+        height: auto;
+        flex-direction: column;
+    }
+    .host-img{
+        margin-top: 20px;
+        margin-right: 50px;
+    }
+    .host-details h2{
+        font-size: 2.25rem;
+    }
+    .host-details{
+        padding: 20px;
+    }
 
     /* Footer Section Responsive */
+    .footer-logo a h1{
+        font-size: 2.25rem;
+    }
+    .footer-icon{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
