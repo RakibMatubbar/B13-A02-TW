@@ -138,10 +138,10 @@ main{
     width: 100%;
     max-width: 1600px;
     height: auto;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    height: 760px;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -161,8 +161,9 @@ main{
 .banner-bg{
     border: 8px solid #2A186C;
     border-radius: 50%;
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,6 +171,7 @@ main{
 }
 
 .banner-bg img{
+    margin-top: 20px;
     padding: 77px 116px 97px;
 }
 
@@ -267,10 +269,14 @@ main{
 }
 
 .about-text h1{
-    margin-top: 50px;
+    margin-top: 140px;
     color: #FFFFFF;
     font-weight: bold;
     font-size: 3rem;
+}
+
+.about-text p, .about-text h1{
+    text-align: center;
 }
 
 .about-text p, .about-card p{
@@ -317,6 +323,7 @@ main{
     gap: 30px;
     max-width: 1200px;
     margin: 120px 200px;
+    margin-bottom: 0px;
     transition: transform 2s ease;
 }
 
@@ -385,7 +392,7 @@ main{
     background-color: #1A0B2E;
     height: auto;
     width: 100%;
-    padding-top: 120px;
+    /* padding-top: 120px; */
     padding-bottom: 120px;
 }
 
@@ -534,8 +541,77 @@ main{
 
 
 /* Footer Section Styles */
+footer{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
+.footer-bg{
+    background-image: url('../assets/footer-bg.png');
+    width: 100%;
+    /* max-width: 1600px; */
+    height: auto;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.footer-info-icon{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #2d1f4b;
+    border-radius: 50px;
+    height: auto;
+    width: auto;
+    transition: all 0.1s ease;
+}
+
+.footer p{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo a h1{
+    margin-top: 24%;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.footer-icon{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    /* padding-bottom: 50px; */
+    transition: transform 0.3s ease;
+}
+
+.footer-icon img{
+    width: 24px;
+    height: 24px;
+}
+
+.footer-icon p, .footer-copy{
+    color: #C4C4C4;
+    font-size: 1rem;
+    gap: 10px;
+}
+
+.footer-copy{
+    margin-bottom: 40px ;
+}
 
 /* Responsive Meadia Query */
 
@@ -724,7 +800,15 @@ main{
         gap: 24px;
     }
 
+
     /* Footer Section Responsive */
+    .footer-icon{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-logo a h1{
+        font-size: 2.8rem;
+    }
+    
 }
 
 
