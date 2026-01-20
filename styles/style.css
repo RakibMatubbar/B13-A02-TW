@@ -297,7 +297,7 @@ main{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
-    margin: auto;
+    margin: 120px 200px;
     transition: transform 2s ease;
 }
 
@@ -352,6 +352,101 @@ main{
     transform: translateY(-20px);
 }
 
+/* Featured Episodes Section Styles */
+#featured{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: #1A0B2E;
+    height: auto;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.featured-text{
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.fetured-text{
+    padding-bottom: 40px;
+    font-size: 3rem;
+}
+
+.featured-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.featured-container h3{
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.featured-container p{
+    color: #C4C4C4;
+    font-size: 1rem;
+}
+
+.p-for-gap{
+    gap: 5px;
+}
+
+.videos{
+    background-color: #250D44;
+    /* padding: 10px; */
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+
+.videos iframe{
+    border-radius: 24px;
+    transition: tranform 0.4s ease;
+}
+
+.videos:hover iframe{
+    transform: scale(1.1);
+    border-radius: 40px;
+}
+
+.videos:hover{
+    transform: scale(1.08 translateY(-10px));
+    box-shadow: 0 12px 23px rgba(138, 43, 226, 0.5);
+    background-color: #2d1050;
+}
+
+.videos h3, p{
+    text-align: left;
+    display: flex;
+    padding-left: 10px;
+}
+
+/* Challange section Styles */
 
 
 /* Responsive Meadia Query */
@@ -465,13 +560,16 @@ main{
     }
 
     /* Why Choose Section Responsive */
+    #choose{
+        padding-bottom: 40px;
+    }
     .choose-boxes{
+        margin: auto;
         padding-left: 20px;
         padding-right: 20px;
     }
     .choose-question{
         font-size: 2rem;
-        padding-top: 40px;
         padding-top: 40px;
         margin-bottom: -60px;
     }
@@ -488,5 +586,29 @@ main{
     .choose-box{
         grid-column: span 1;
     }
-    
+
+    /* Featured Episodes Section Responsive */
+    #featured{
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .center{
+        /* margin-top: 0px; */
+        padding: 20px;
+    }
+    .featured-container{
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .featured-text{
+        padding-bottom: 20px;
+        font-size: 2rem;
+        margin: 0 auto;
+    }
+
+    /* Challange section Responsive */
 }
